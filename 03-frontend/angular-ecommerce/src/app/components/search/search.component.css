@@ -1,0 +1,11 @@
+.au-btn-submit-2{
+    position:relative;
+    right:0;
+    min-width:95px;
+    color:#fff;
+    border:1px solid #efa02f;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:43px;
+    background:#efa02f
+}
