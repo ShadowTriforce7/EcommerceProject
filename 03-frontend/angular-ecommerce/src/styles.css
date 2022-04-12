@@ -319,7 +319,7 @@ input.au-input.au-input-xl{
     left:0;
     top:0;
     bottom:0;
-    background:#fff;
+    background:#efa02f;
     overflow-y:auto
 }
 
@@ -690,7 +690,7 @@ table.table.table-bordered{
     border:1px solid #dee2e6
 }
 table.table.table-bordered th{
-    BACKGROUND:#0da8e4;
+    BACKGROUND:#b02871;
     color:#fff;
     font-size:14px;
     padding:7px
