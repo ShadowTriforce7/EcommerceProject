@@ -1,0 +1,21 @@
+.total-2{
+    background:#efa02f;
+    line-height:43px;
+    color:#fff;
+    border-radius:30px;
+    border:1px solid #f0c080;
+    float:left;
+    margin-top:7px;
+    padding-left:17px
+}
+
+.total-2 span{
+    display:inline-block;
+    background:#fff;
+    padding:0 13px;
+    color:#000;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    margin-left:11px
+}
+
