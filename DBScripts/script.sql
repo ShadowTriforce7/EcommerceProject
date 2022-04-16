@@ -473,8 +473,12 @@ AUTO_INCREMENT = 1;
 -- Truncate Table
 -- ------------------------------------------------------
 
-TRUNCATE TABLE product_category
-TRUNCATE TABLE product
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE product_category;
+SET FOREIGN_KEY_CHECKS = 1; 
+SET FOREIGN_KEY_CHECKS= 0;
+TRUNCATE TABLE product;
+SET FOREIGN_KEY_CHECKS = 1;
 
 
 -- -----------------------------------------------------
