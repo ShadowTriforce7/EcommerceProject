@@ -487,8 +487,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 INSERT INTO product_category(category_name) VALUES ('Drinks');
 INSERT INTO product_category(category_name) VALUES ('Spices');
-INSERT INTO product_category(category_name) VALUES ('Vegetables');
 INSERT INTO product_category(category_name) VALUES ('Fruits');
+INSERT INTO product_category(category_name) VALUES ('Vegetables');
+
 
 -- -----------------------------------------------------
 -- Drinks
