@@ -1,4 +1,6 @@
 <factorypath>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/stripe/stripe-java/20.116.0/stripe-java-20.116.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/okta/spring/okta-spring-boot-starter/2.0.1/okta-spring-boot-starter-2.0.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/okta/spring/okta-spring-security-oauth2/2.0.1/okta-spring-security-oauth2-2.0.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/okta/commons/okta-config-check/1.2.5/okta-config-check-1.2.5.jar" enabled="true" runInBatchMode="false"/>
