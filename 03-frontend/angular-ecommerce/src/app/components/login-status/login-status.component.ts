@@ -49,5 +49,6 @@ export class LoginStatusComponent implements OnInit {
   logout(){
     //terminates session with Okta and removes current tokens
     this.oktaAuthService.signOut();
+    this.storage.setItem('userEmail', JSON.stringify(''));
   }
 }
