@@ -4,6 +4,11 @@
  * ----------------------------
  */
 
+  /*#b02871 - #1d7c55
+    #efa02f - #7f8474
+    #e5e5e5 - #4f5a4c
+ */
+
  *{
     margin:0;
     padding:0;
@@ -84,8 +89,9 @@ h6{
 }
 
 a{
-    display:inline-block
+    display:inline-block;
 }
+
 
 a:active,a:focus,a:hover{
     text-decoration:none;
@@ -106,12 +112,12 @@ a,a:hover{
 
 .page-wrapper{
     overflow:hidden;
-    background:#e5e5e5;
+    background:#4f5a4c;
     padding-bottom:8vh
 }
 
 .page-container{
-    background:#e5e5e5;
+    background:#4f5a4c;
     padding-left:200px
 }
 
@@ -224,7 +230,7 @@ input.au-input.au-input-xl{
 
 .au-input{
     line-height:43px;
-    border:1px solid #e5e5e5;
+    border:1px solid #4f5a4c;
     font-size:14px;
     color:#666;
     padding:0 17px;
@@ -319,12 +325,12 @@ input.au-input.au-input-xl{
     left:0;
     top:0;
     bottom:0;
-    background:#efa02f;
+    background:#313C30;
     overflow-y:auto
 }
 
 .menu-sidebar .logo{
-    background:#fff;
+    background:#000;
     height:75px;
     padding:0 35px;
     display:-webkit-box;
@@ -368,7 +374,7 @@ input.au-input.au-input-xl{
 
 .navbar-sidebar .navbar-list li a{
     display:block;
-    color:#555;
+    color:#D3D2B6;
     font-size:16px;
     padding:5px 0
 }
@@ -378,7 +384,7 @@ input.au-input.au-input-xl{
 }
 
 .navbar-sidebar .navbar-list li a:hover{
-    color:#0da8e4
+    color:#1c9b63
 }
 
 /* 
@@ -481,7 +487,7 @@ input.au-input.au-input-xl{
     line-height:inherit
 }
 .header-mobile .navbar-mobile .navbar-mobile-list li a:hover{
-    color:#0da8e4
+    color:#1c9b63
 }
 .header-mobile .navbar-mobile .navbar-mobile-list li a>i{
     margin-right:19px
@@ -542,11 +548,11 @@ input.au-input.au-input-xl{
 .price{
     margin:15px 0 0;
     font-weight:800;
-    color:#0da8e4
+    color:#1c9b63
 }
 .product-box h1{
     font-size:18px;
-    border-bottom:1px solid #ccc;
+    border-bottom:1px ;
     padding-bottom:5px;
     font-weight:600;
     padding-top:12px;
@@ -679,6 +685,8 @@ select{
  * ----------------------------
  */
 
+
+
 .table{
     margin:0
 }
@@ -690,7 +698,7 @@ table.table.table-bordered{
     border:1px solid #dee2e6
 }
 table.table.table-bordered th{
-    BACKGROUND:#b02871;
+    BACKGROUND:#1d7c55;
     color:#fff;
     font-size:14px;
     padding:7px
@@ -717,7 +725,7 @@ table.table.table-bordered th{
  .price{
     margin:15px 0 0;
     font-weight:800;
-    color:#0da8e4
+    color:#1c9b63
 }
 
 .detail-section{
@@ -737,8 +745,8 @@ table.table.table-bordered th{
 
  .btn-info{
     color:#fff;
-    background-color:#0da8e4!important;
-    border-color:#0da8e4!important
+    background-color:#1c9b63!important;
+    border-color:#1c9b63!important
 }
 a.primary-btn{
     background:#05143f;
@@ -751,7 +759,7 @@ a.primary-btn{
     margin-top:5px
 }
 a.primary-btn:hover{
-    background:#0da8e4;
+    background:#1c9b63;
     color:#fff
 }
 
