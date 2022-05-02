@@ -27,6 +27,7 @@ jobs:
         run: |
           cd spring-boot-ecommerce
           mvn clean install
+          mvn package
           
 
       - name: Upload artifact for deployment job
