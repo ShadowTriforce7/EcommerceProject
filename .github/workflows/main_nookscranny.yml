@@ -42,7 +42,7 @@ jobs:
     environment:
       name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
+      
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: "my-ecommerce-app"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5477DC3C7DB146DAA6690F2CEDDD24F8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7E52EAA7CB054B4ABA438D16C3E77051 }}
           package: .
