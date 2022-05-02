@@ -37,7 +37,7 @@ public class CheckoutController {
 	}
 
 	@PostMapping("/payment-intent")
-	public ResponseEntity<String> createPaymnetIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
+	public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
 		
 		logger.info("paymentInfo.amount: " + paymentInfo.getAmount());
 		
