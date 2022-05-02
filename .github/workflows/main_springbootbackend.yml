@@ -1,14 +1,12 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - ecommerce-backend
+name: Build and deploy JAR app to Azure Web App - SpringBootBackend
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'spring-boot-ecommerce/**'
   workflow_dispatch:
 
 jobs:
@@ -21,18 +19,16 @@ jobs:
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
-          java-version: '1.8'
+          java-version: '8'
 
       - name: Build with Maven
-        run: |
-          cd spring-boot-ecommerce
-          mvn clean install
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/spring-boot-ecommerce/target/*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -40,7 +36,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
@@ -53,5 +49,5 @@ jobs:
         with:
           app-name: 'SpringBootBackend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BF3F2E562C54453CBE7B19E8EBDDF4DF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7E52EAA7CB054B4ABA438D16C3E77051 }}
           package: '*.jar'
