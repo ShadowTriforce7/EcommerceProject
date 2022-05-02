@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - 'angular-ecommerce/**'
+      - 'frontend/**'
   workflow_dispatch:
 
 jobs:
@@ -53,7 +53,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "NooksCranny"
+          app-name: "my-ecommerce-app"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5477DC3C7DB146DAA6690F2CEDDD24F8 }}
           package: .
