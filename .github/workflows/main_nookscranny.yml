@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: "NooksCranny"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7E52EAA7CB054B4ABA438D16C3E77051 }}
+          publish-profile: ${{ secrets.AZUREFSE }}
           package: .
