@@ -289,7 +289,7 @@ class OrderTest {
         assertEquals("Status", order2.getStatus());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         assertEquals("1969-12-31", simpleDateFormat.format(order2.getLastUpdated()));
-        BigDecimal expectedTotalPrice = valueOfResult.ONE;
+        BigDecimal expectedTotalPrice = BigDecimal.ONE;
         assertSame(expectedTotalPrice, order2.getTotalPrice());
         SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
         assertEquals("1969-12-31", simpleDateFormat1.format(order2.getDateCreated()));
