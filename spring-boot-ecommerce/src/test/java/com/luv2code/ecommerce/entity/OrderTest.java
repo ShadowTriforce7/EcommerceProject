@@ -244,10 +244,10 @@ class OrderTest {
         Order order1 = new Order();
         order1.setBillingAddress(address3);
         order1.setCustomer(customer2);
-        LocalDateTime atStartOfDayResult2 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult2 = LocalDate.of(1969, 12, 31).atStartOfDay();
         order1.setDateCreated(Date.from(atStartOfDayResult2.atZone(ZoneId.of("UTC")).toInstant()));
         order1.setId(123L);
-        LocalDateTime atStartOfDayResult3 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult3 = LocalDate.of(1969, 12, 31).atStartOfDay();
         order1.setLastUpdated(Date.from(atStartOfDayResult3.atZone(ZoneId.of("UTC")).toInstant()));
         order1.setOrderItems(new HashSet<>());
         order1.setOrderTrackingNumber("42");
@@ -268,10 +268,10 @@ class OrderTest {
         Order order2 = new Order();
         order2.setBillingAddress(address2);
         order2.setCustomer(customer1);
-        LocalDateTime atStartOfDayResult4 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult4 = LocalDate.of(1969, 12, 31).atTime(13, 0);
         order2.setDateCreated(Date.from(atStartOfDayResult4.atZone(ZoneId.of("UTC")).toInstant()));
         order2.setId(123L);
-        LocalDateTime atStartOfDayResult5 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult5 = LocalDate.of(1969, 12, 31).atTime(13, 0);
         order2.setLastUpdated(Date.from(atStartOfDayResult5.atZone(ZoneId.of("UTC")).toInstant()));
         order2.setOrderItems(new HashSet<>());
         order2.setOrderTrackingNumber("42");
@@ -289,7 +289,7 @@ class OrderTest {
         assertEquals("Status", order2.getStatus());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         assertEquals("1969-12-31", simpleDateFormat.format(order2.getLastUpdated()));
-        BigDecimal expectedTotalPrice = valueOfResult.ONE;
+        BigDecimal expectedTotalPrice = BigDecimal.ONE;
         assertSame(expectedTotalPrice, order2.getTotalPrice());
         SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
         assertEquals("1969-12-31", simpleDateFormat1.format(order2.getDateCreated()));
