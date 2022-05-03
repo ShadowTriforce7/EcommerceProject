@@ -268,10 +268,10 @@ class OrderTest {
         Order order2 = new Order();
         order2.setBillingAddress(address2);
         order2.setCustomer(customer1);
-        LocalDateTime atStartOfDayResult4 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult4 = LocalDate.of(1969, 12, 31).atStartOfDay();
         order2.setDateCreated(Date.from(atStartOfDayResult4.atZone(ZoneId.of("UTC")).toInstant()));
         order2.setId(123L);
-        LocalDateTime atStartOfDayResult5 = LocalDate.of(1970, 1, 1).atStartOfDay();
+        LocalDateTime atStartOfDayResult5 = LocalDate.of(1969, 12, 31).atStartOfDay();
         order2.setLastUpdated(Date.from(atStartOfDayResult5.atZone(ZoneId.of("UTC")).toInstant()));
         order2.setOrderItems(new HashSet<>());
         order2.setOrderTrackingNumber("42");
