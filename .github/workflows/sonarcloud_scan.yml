@@ -43,7 +43,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           cd spring-boot-ecommerce
-          mvn sonar:sonar -Pcoverage -k:{ShadowTriforce7_EcommerceProject}
+          mvn sonar:sonar -Pcoverage -Dsonar.projectKey=ShadowTriforce7_EcommerceProject
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ShadowTriforce7_EcommerceProject
 
 
