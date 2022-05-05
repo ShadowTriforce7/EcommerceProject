@@ -1,11 +1,10 @@
 package com.luv2code.ecommerce.controller;
 
-<<<<<<< HEAD:02-backend/spring-boot-ecommerce/src/main/java/com/luv2code/ecommerce/controller/CheckoutController.java
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-=======
 
->>>>>>> d5962b801222564ff5baac3bb2d51192a0a454c5:spring-boot-ecommerce/src/main/java/com/luv2code/ecommerce/controller/CheckoutController.java
+
 import java.util.logging.Logger;
 
 import org.springframework.http.HttpStatus;
@@ -22,7 +21,10 @@ import com.luv2code.ecommerce.service.CheckoutService;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 
+import lombok.extern.log4j.Log4j;
+
 //@CrossOrigin("http://localhost:4200")
+@Log4j
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
@@ -38,6 +40,7 @@ public class CheckoutController {
 	@PostMapping("/purchase")
 	public PurchaseResponse placeOrder(@RequestBody Purchase purchase) {
 		PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
+		log.info("Purchasing");
 		return purchaseResponse;
 	}
 
