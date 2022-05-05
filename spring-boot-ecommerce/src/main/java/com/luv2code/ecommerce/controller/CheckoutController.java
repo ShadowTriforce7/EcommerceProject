@@ -1,8 +1,5 @@
 package com.luv2code.ecommerce.controller;
 
-
-import java.util.logging.Logger;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,12 +14,15 @@ import com.luv2code.ecommerce.service.CheckoutService;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 
+import lombok.extern.log4j.Log4j;
+
 //@CrossOrigin("http://localhost:4200")
+@Log4j
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
 
-	private Logger logger = Logger.getLogger(getClass().getName());
+	//private Logger logger = Logger.getLogger(getClass().getName());
 	
 	private CheckoutService checkoutService;
 	
@@ -33,13 +33,15 @@ public class CheckoutController {
 	@PostMapping("/purchase")
 	public PurchaseResponse placeOrder(@RequestBody Purchase purchase) {
 		PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
+		log.info("Purchasing");
 		return purchaseResponse;
 	}
 
 	@PostMapping("/payment-intent")
 	public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
 		
-		logger.info("paymentInfo.amount: " + paymentInfo.getAmount());
+		//logger.info("paymentInfo.amount: " + paymentInfo.getAmount());
+		log.info("paymentInfo.amount: "+ paymentInfo.getAmount()+" cents");
 		
 		PaymentIntent paymentIntent = checkoutService.createPaymentIntent(paymentInfo);
 		
