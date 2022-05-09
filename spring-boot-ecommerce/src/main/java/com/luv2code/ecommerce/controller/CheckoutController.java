@@ -1,6 +1,6 @@
 package com.luv2code.ecommerce.controller;
 
-<<<<<<< HEAD
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.logging.Logger;
 
-=======
->>>>>>> a443d4feac22ed4d9cd96e3394915bdecbe7d7a9
+
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
