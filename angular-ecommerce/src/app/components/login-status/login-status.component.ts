@@ -41,6 +41,12 @@ export class LoginStatusComponent implements OnInit {
 
           //now store email in browser storage
           this.storage.setItem('userEmail', JSON.stringify(theEmail));
+
+          const theGroups = res['groups'];
+          this.storage.setItem('isAdmin', theGroups.includes('Admin'));
+
+          console.log(res);
+
         }
       );
     }
